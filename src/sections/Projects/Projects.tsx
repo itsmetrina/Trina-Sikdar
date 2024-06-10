@@ -1,7 +1,7 @@
 import styles from './ProjectStyles.module.css';
-import viberr from '../../assets/viberr.png';
+import weather from '../../assets/cloud.gif';
 import freshBurger from '../../assets/fresh-burger.png';
-import fitlift from '../../assets/fitlift.png';
+import portfolio from '../../assets/portfolio.gif';
 import hipsster from '../../assets/hipsster.png';
 import ProjectCard from '../../common/ProjectCard';
 
@@ -15,9 +15,9 @@ interface MyProjects {
 const Projects = () => {
 	
 	const projectList: MyProjects[] = [
-		{ src: viberr, link: "https://github.com/itsmetrina/Trina-Sikdar", h3: "Viberr", p: "Streaming App" },
+		{ src: weather, link: "https://github.com/itsmetrina/weather-app", h3: "Weather", p: "Weather App" },
 		{ src: freshBurger, link: "https://github.com/itsmetrina/Trina-Sikdar", h3: "Fresh Burger", p: "Restaurant Shop" },
-		{ src: fitlift, link: "https://github.com/itsmetrina/Trina-Sikdar", h3: "Fitlift", p: "Fitness App" },
+		{ src: portfolio, link: "https://github.com/itsmetrina/Trina-Sikdar", h3: "Portfolio", p: "Portfolio App" },
 		{ src: hipsster, link: "https://github.com/itsmetrina/Trina-Sikdar", h3: "Hipsster", p: "Glasses Shop" }
 	];
 	return (
