@@ -1,6 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-const ThemeContext = createContext();
+interface ThemeContextValue {
+    theme: string;
+    toggleTheme: () => void;
+}
+
+const ThemeContext = createContext<ThemeContextValue>({
+    theme: "light",
+    toggleTheme: () => { },
+});
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useTheme = () => useContext(ThemeContext);
@@ -10,19 +18,22 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-    const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+    const [theme, setTheme] = useState(
+        () => localStorage.getItem("theme") || "light"
+    );
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
     useEffect(() => {
-        document.body.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
     }, [theme]);
 
-
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
-    )
-}
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
+};

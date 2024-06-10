@@ -10,7 +10,7 @@ import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
 
 const Star = () => {
-	const { theme, toggleTheme } = useTheme() as { theme: string; toggleTheme: () => void };
+	const { theme, toggleTheme } = useTheme() as unknown as { theme: string; toggleTheme: () => void };
 
 	const themeIcon = theme === 'light' ? sun : moon;
 	const githubIcon = theme === 'light' ? githubLight : githubDark;
