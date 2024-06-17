@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.experiencesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.experienceCard {
+    max-width: 300px;
+}
+
+.experienceCard:hover {
+    transform: scale(1.05);
+}
+
+@media (width >=800px) {
+    .experiencesContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 30px;
+    }
+}

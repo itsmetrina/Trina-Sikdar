@@ -12,16 +12,9 @@ import leafletJs from "../../assets/Skill_Icon/LeafletJS.png";
 import postgres from "../../assets/Skill_Icon/Postgres.png";
 import git from "../../assets/Skill_Icon/Git.png";
 import vscode from "../../assets/Skill_Icon/VSCode.png";
+import { SkillCategory } from "../../common/interface";
 
-interface SkillCategory {
-    category: string;
-    skills: Skill[];
-}
 
-interface Skill {
-    name: string;
-    iconLink: string;
-}
 
 const Skills = () => {
     const skills: SkillCategory[] = [
