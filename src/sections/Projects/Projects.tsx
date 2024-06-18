@@ -6,7 +6,7 @@ import { MyProjects } from '../../common/interface';
 
 const Projects = () => {
 	const projectList: MyProjects[] = [
-		{ src: weather, link: "https://github.com/itsmetrina/weather-app", h3: "Weather", p: "Weather App" },
+		{ src: weather, link: "https://github.com/itsmetrina/weather-app", h3: "Weather", p: "A Weather Forecast App" },
 		{ src: portfolio, link: "https://github.com/itsmetrina/Trina-Sikdar", h3: "Portfolio", p: "Portfolio App" }
 	];
 	return (
