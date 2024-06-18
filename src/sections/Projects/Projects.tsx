@@ -1,6 +1,6 @@
 import styles from './ProjectStyles.module.css';
-import weather from '../../assets/cloud.gif';
-import portfolio from '../../assets/portfolio.gif';
+import weather from '../../assets/cloud.png';
+import portfolio from '../../assets/girl.png';
 import ProjectCard from '../../common/ProjectCard';
 import { MyProjects } from '../../common/interface';
 

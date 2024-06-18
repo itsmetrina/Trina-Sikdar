@@ -12,9 +12,7 @@ import gmailDark from "../../assets/gmail-dark.png";
 import CV from "../../assets/cv.pdf";
 
 import { useTheme } from "../../common/ThemeContext";
-// import { useEffect, useState } from "react";
-
-// const roles = ['Frontend Developer', 'UI Developer', 'Angular Developer'];
+import { ReactTyped } from "react-typed";
 
 const Star = () => {
 	const { theme, toggleTheme } = useTheme() as unknown as { theme: string; toggleTheme: () => void };
@@ -23,16 +21,6 @@ const Star = () => {
 	const githubIcon = theme === 'light' ? githubLight : githubDark;
 	const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 	const gmailIcon = theme === 'light' ? gmailLight : gmailDark;
-
-	// const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-
-	// useEffect(() => {
-	// 	const interval = setInterval(() => {
-	// 		setCurrentRoleIndex(currentRoleIndex => (currentRoleIndex + 1) % roles.length);
-	// 	}, 4000);
-
-	// 	return () => clearInterval(interval);
-	// }, []);
 
 	return (
 		<section id="star" className={styles.container}>
@@ -55,8 +43,17 @@ const Star = () => {
 					<br />
 					Sikdar
 				</h1>
-				{/* <h2>{roles[currentRoleIndex]}</h2> */}
-				<h2>Frontend Developer</h2>
+				<h2>
+					{" "}
+					<ReactTyped
+						strings={["Frontend Developer", "UI Developer", "Angular Developer"]}
+						typeSpeed={100}
+						loop
+						backSpeed={20}
+						cursorChar="|"
+						showCursor={true}
+					/>
+				</h2>
 				<span>
 					<a href="https://github.com" target="_blank">
 						<img src={githubIcon} alt="Github Icon" />

@@ -18,7 +18,7 @@ export interface Skill {
 export interface MyExperience {
     company: string;
     role: string;
-    startDate: string;
-    endDate?: string;
+    startDate: Date;
+    endDate: Date | string;
     description: string;
 }

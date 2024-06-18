@@ -4,7 +4,10 @@ import styles from './ExperienceStyles.module.css'
 
 const Experience = () => {
 	const experienceList: MyExperience[] = [
-		{ company: "Wipro", role: "Developer", startDate: '2024-07-19', endDate: "current", description: "Developed web applications using React and Node.js" },
+		{ company: "Wipro", role: "Developer", startDate: new Date('2024-07-19'), endDate: "Present", description: "Developed web applications using React and Node.js" },
+		{ company: "Wipro", role: "Developer", startDate: new Date('2024-07-19'), endDate: "Present", description: "Developed web applications using React and Node.js" },
+		{ company: "Wipro", role: "Developer", startDate: new Date('2024-07-19'), endDate: "Present", description: "Developed web applications using React and Node.js" },
+		{ company: "Wipro", role: "Developer", startDate: new Date('2024-07-19'), endDate: "Present", description: "Developed web applications using React and Node.js" },
 	];
 
 	return (
