@@ -1,81 +1,42 @@
 import styles from "./SkillStyles.module.css";
 import SkillList from "../../common/SkillList";
 
-import html from "../../assets/Skill_Icon/HTML.png";
-import css from "../../assets/Skill_Icon/CSS.png";
-import javascript from "../../assets/Skill_Icon/Javascript.png";
-import typescript from "../../assets/Skill_Icon/Typescript.png";
-import python from "../../assets/Skill_Icon/Python.png";
-import angular from "../../assets/Skill_Icon/Angular.png";
-import react from "../../assets/Skill_Icon/React.png";
-import leafletJs from "../../assets/Skill_Icon/LeafletJS.png";
-import postgres from "../../assets/Skill_Icon/Postgres.png";
-import git from "../../assets/Skill_Icon/Git.png";
-import vscode from "../../assets/Skill_Icon/VSCode.png";
-import { SkillCategory } from "../../common/interface";
+import { Skill } from "../../common/interface";
 
-
+import { FaAngular, FaCss3, FaGitAlt, FaHtml5, FaPython, FaReact } from "react-icons/fa";
+import { SiJavascript, SiLeaflet, SiPostgresql, SiTypescript } from "react-icons/si";
+import { VscCode } from "react-icons/vsc";
 
 const Skills = () => {
-    const skills: SkillCategory[] = [
-        {
-            category: "Languages",
-            skills: [
-                { name: "HTML", iconLink: html },
-                { name: "CSS", iconLink: css },
-                { name: "JavaScript", iconLink: javascript },
-                { name: "TypeScript", iconLink: typescript },
-                { name: "Python", iconLink: python },
-            ],
-        },
-        {
-            category: "Frameworks",
-            skills: [
-                { name: "Angular", iconLink: angular },
-                { name: "React", iconLink: react },
-            ],
-        },
-        {
-            category: "Libraries",
-            skills: [
-                { name: "Angular Material", iconLink: angular },
-                { name: "Leaflet.js", iconLink: leafletJs },
-            ],
-        },
-        {
-            category: "Databases",
-            skills: [{ name: "PostgreSQL", iconLink: postgres }],
-        },
-        {
-            category: "Tools",
-            skills: [
-                { name: "Git", iconLink: git },
-                { name: "VS Code", iconLink: vscode },
-            ],
-        },
+    const skills: Skill[] = [
+        { name: "HTML", iconLink: FaHtml5, color: "#E44D26" },
+        { name: "CSS", iconLink: FaCss3, color: "#006fab" },
+        { name: "JavaScript", iconLink: SiJavascript, color: "#f7df1e" },
+        { name: "TypeScript", iconLink: SiTypescript, color: "#0f5da1" },
+        { name: "Python", iconLink: FaPython, color: "#006fab" },
+        { name: "Angular", iconLink: FaAngular, color: "#006fab" },
+        { name: "React", iconLink: FaReact, color: "#006fab" },
+        { name: "Angular Material", iconLink: FaAngular, color: "#006fab" },
+        { name: "Leaflet.js", iconLink: SiLeaflet, color: "#006fab" },
+        { name: "PostgreSQL", iconLink: SiPostgresql, color: "#006fab" },
+        { name: "Git", iconLink: FaGitAlt, color: "#006fab" },
+        { name: "VS Code", iconLink: VscCode, color: "#006fab" }
+
     ];
-
-    const renderSkills = (category: string) => {
-        const categorySkills = skills.find((cat) => cat.category === category);
-        if (!categorySkills) return null;
-
-        return categorySkills.skills.map((skill) => (
-            <SkillList key={skill.name} src={skill.iconLink} skill={skill.name} />
-        ));
-    };
 
     return (
         <section id="skills" className={styles.container}>
             <h1 className="sectionTitle">Skills</h1>
-            <div className={styles.skillList}>{renderSkills("Languages")}</div>
-            <hr />
-            <div className={styles.skillList}>{renderSkills("Frameworks")}</div>
-            <hr />
-            <div className={styles.skillList}>{renderSkills("Libraries")}</div>
-            <hr />
-            <div className={styles.skillList}>{renderSkills("Databases")}</div>
-            <hr />
-            <div className={styles.skillList}>{renderSkills("Tools")}</div>
+            <div className={styles.skillList}>
+                {skills.map((obj, index) => (
+                    <SkillList
+                        key={index}
+                        icon={obj.iconLink}
+                        skill={obj.name}
+                        color={obj.color}
+                    />
+                ))}
+            </div>
         </section>
     );
 };

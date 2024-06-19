@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface MyProjects {
     src: string;
     link: string;
@@ -12,7 +14,14 @@ export interface SkillCategory {
 
 export interface Skill {
     name: string;
-    iconLink: string;
+    iconLink: IconType;
+    color: string;
+}
+
+export interface SkillListProps {
+    icon: React.ElementType;
+    skill: string;
+    color: string;
 }
 
 export interface MyExperience {

@@ -1,8 +1,10 @@
-const SkillList = ({ src, skill }: { src: string, skill: string }) => {
+import { SkillListProps } from "./interface"
+
+const SkillList = ({ icon: Icon, color }: SkillListProps) => {
     return (
         <span>
-            <img src={src} alt="Checkmark icon" />
-            <p>{skill}</p>
+            <Icon style={{ color }} />
+            {/* <p>{skill}</p> */}
         </span>
     )
 }

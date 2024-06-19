@@ -1,5 +1,4 @@
 import './App.css'
-import Experience from './sections/Experience/Experience';
 import Footer from './sections/Footer/Footer';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/Skills';
@@ -10,7 +9,6 @@ const App = () => {
 		<>
 			<Star />
 			<Skills />
-			<Experience />
 			<Projects />
 			<Footer />
 		</>
