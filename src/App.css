@@ -6,8 +6,6 @@
     --experience-card-bg: #ffffff00;
     --text-color: #222;
     --form-text-color: #555;
-    --box-shadow-color: #0000001a;
-    --pointer: #6600ff;
     --footer-text-color: #888;
 }
 
@@ -19,8 +17,6 @@
     --experience-card-bg: #fff;
     --text-color: #fff;
     --form-text-color: #fff;
-    --box-shadow-color: #ffffff1a;
-    --pointer: #ff0066;
     --footer-text-color: #bbb;
 }
 
@@ -118,11 +114,4 @@ p {
     .sectionTitle {
         margin-bottom: 75px;
     }
-}
-
-.pointer {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: var(--pointer);
 }

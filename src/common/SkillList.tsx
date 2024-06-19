@@ -1,11 +1,13 @@
+import { Tooltip, IconButton } from "@mui/material"
 import { SkillListProps } from "./interface"
 
-const SkillList = ({ icon: Icon, color }: SkillListProps) => {
+const SkillList = ({ icon: Icon, skill, color }: SkillListProps) => {
     return (
-        <span>
-            <Icon style={{ color }} />
-            {/* <p>{skill}</p> */}
-        </span>
+        <Tooltip title={ skill }>
+            <IconButton>
+                <Icon style={{ color }} />
+            </IconButton>
+        </Tooltip>
     )
 }
 

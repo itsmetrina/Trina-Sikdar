@@ -1,6 +1,6 @@
 import styles from "./StarStyles.module.css";
 
-import starImg from "../../assets/hero-img.png";
+import starImg from "../../assets/trina.jpg";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
 import githubLight from "../../assets/github-light.svg";
@@ -13,14 +13,23 @@ import CV from "../../assets/cv.pdf";
 
 import { useTheme } from "../../common/ThemeContext";
 import { ReactTyped } from "react-typed";
+import { motion } from "framer-motion";
+
+const leftFlowIn = (delay: number) => ({
+	hidden: { x: -100, opacity: 0 },
+	visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
+});
 
 const Star = () => {
-	const { theme, toggleTheme } = useTheme() as unknown as { theme: string; toggleTheme: () => void };
+	const { theme, toggleTheme } = useTheme() as unknown as {
+		theme: string;
+		toggleTheme: () => void;
+	};
 
-	const themeIcon = theme === 'light' ? sun : moon;
-	const githubIcon = theme === 'light' ? githubLight : githubDark;
-	const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
-	const gmailIcon = theme === 'light' ? gmailLight : gmailDark;
+	const themeIcon = theme === "light" ? sun : moon;
+	const githubIcon = theme === "light" ? githubLight : githubDark;
+	const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
+	const gmailIcon = theme === "light" ? gmailLight : gmailDark;
 
 	return (
 		<section id="star" className={styles.container}>
@@ -38,23 +47,31 @@ const Star = () => {
 				/>
 			</div>
 			<div className={styles.info}>
-				<h1>
+				<motion.h1 variants={leftFlowIn(0)} initial="hidden" animate="visible">
 					Trina
 					<br />
 					Sikdar
-				</h1>
-				<h2>
+				</motion.h1>
+				<motion.h2 variants={leftFlowIn(0)} initial="hidden" animate="visible">
 					{" "}
 					<ReactTyped
-						strings={["Frontend Developer", "UI Developer", "Angular Developer"]}
+						strings={[
+							"Frontend Developer",
+							"UI Developer",
+							"Angular Developer",
+						]}
 						typeSpeed={100}
 						loop
 						backSpeed={20}
 						cursorChar="|"
 						showCursor={true}
 					/>
-				</h2>
-				<span>
+				</motion.h2>
+				<motion.span
+					variants={leftFlowIn(0)}
+					initial="hidden"
+					animate="visible"
+				>
 					<a href="https://github.com" target="_blank">
 						<img src={githubIcon} alt="Github Icon" />
 					</a>
@@ -64,17 +81,28 @@ const Star = () => {
 					<a href="mailto:trinasikdar2000@gmail.com" target="_blank">
 						<img src={gmailIcon} alt="Gmail Icon" />
 					</a>
-				</span>
-				<p className={styles.description}>
+				</motion.span>
+				<motion.p
+					className={styles.description}
+					variants={leftFlowIn(0)}
+					initial="hidden"
+					animate="visible"
+				>
 					With a passion for developing modern React web apps for commercial
 					businesses.
-				</p>
-				<a href={CV} download>
+				</motion.p>
+				<motion.a
+					href={CV}
+					download
+					variants={leftFlowIn(0)}
+					initial="hidden"
+					animate="visible"
+				>
 					<button className="hover">Resume</button>
-				</a>
+				</motion.a>
 			</div>
 		</section>
 	);
-}
+};
 
-export default Star
+export default Star;
