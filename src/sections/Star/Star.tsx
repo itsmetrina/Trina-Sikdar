@@ -1,8 +1,7 @@
 import styles from "./StarStyles.module.css";
 
-import starImg from "../../assets/trina.jpg";
-import sun from "../../assets/sun.svg";
-import moon from "../../assets/moon.svg";
+import starImg from "../../assets/hero-img.png";
+
 import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
@@ -15,6 +14,8 @@ import { useTheme } from "../../common/ThemeContext";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 
+import { IoMdMoon, IoMdSunny } from "react-icons/io";
+
 const leftFlowIn = (delay: number) => ({
 	hidden: { x: -100, opacity: 0 },
 	visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
@@ -26,7 +27,8 @@ const Star = () => {
 		toggleTheme: () => void;
 	};
 
-	const themeIcon = theme === "light" ? sun : moon;
+	const themeIcon =
+		theme === "light" ? <IoMdSunny size={30} /> : <IoMdMoon size={30} />;
 	const githubIcon = theme === "light" ? githubLight : githubDark;
 	const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
 	const gmailIcon = theme === "light" ? gmailLight : gmailDark;
@@ -34,17 +36,22 @@ const Star = () => {
 	return (
 		<section id="star" className={styles.container}>
 			<div className={styles.colorModeContainer}>
-				<img
+				<motion.img
 					className={styles.star}
 					src={starImg}
 					alt="Profile picture of Trina Sikdar"
+					initial={{ x: 100, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					transition={{ duration: 1, delay: 1.2 }}
 				/>
-				<img
+				<motion.span
 					className={styles.colorMode}
-					src={themeIcon}
-					alt="Color mode icon"
 					onClick={toggleTheme}
-				/>
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.9 }}
+				>
+					{themeIcon}
+				</motion.span>
 			</div>
 			<div className={styles.info}>
 				<motion.h1 variants={leftFlowIn(0)} initial="hidden" animate="visible">
@@ -52,7 +59,11 @@ const Star = () => {
 					<br />
 					Sikdar
 				</motion.h1>
-				<motion.h2 variants={leftFlowIn(0)} initial="hidden" animate="visible">
+				<motion.h2
+					variants={leftFlowIn(0.25)}
+					initial="hidden"
+					animate="visible"
+				>
 					{" "}
 					<ReactTyped
 						strings={[
@@ -68,7 +79,7 @@ const Star = () => {
 					/>
 				</motion.h2>
 				<motion.span
-					variants={leftFlowIn(0)}
+					variants={leftFlowIn(0.5)}
 					initial="hidden"
 					animate="visible"
 				>
@@ -84,7 +95,7 @@ const Star = () => {
 				</motion.span>
 				<motion.p
 					className={styles.description}
-					variants={leftFlowIn(0)}
+					variants={leftFlowIn(0.75)}
 					initial="hidden"
 					animate="visible"
 				>
@@ -94,11 +105,13 @@ const Star = () => {
 				<motion.a
 					href={CV}
 					download
-					variants={leftFlowIn(0)}
+					variants={leftFlowIn(1)}
 					initial="hidden"
 					animate="visible"
 				>
-					<button className="hover">Resume</button>
+					<button className="hover">
+						Resume
+					</button>
 				</motion.a>
 			</div>
 		</section>
