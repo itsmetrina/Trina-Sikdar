@@ -3,40 +3,63 @@ import SkillList from "../../common/SkillList";
 
 import { Skill } from "../../common/interface";
 
-import { FaAngular, FaCss3, FaGitAlt, FaHtml5, FaPython, FaReact } from "react-icons/fa";
-import { SiJavascript, SiLeaflet, SiPostgresql, SiTypescript } from "react-icons/si";
+import {
+    FaAngular,
+    FaCss3,
+    FaGitAlt,
+    FaHtml5,
+    FaPython,
+    FaReact,
+} from "react-icons/fa";
+import {
+    SiJavascript,
+    SiLeaflet,
+    SiPostgresql,
+    SiTypescript,
+} from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 const Skills = () => {
     const skills: Skill[] = [
-        { name: "HTML", iconLink: FaHtml5, color: "#E44D26" },
-        { name: "CSS", iconLink: FaCss3, color: "#006fab" },
-        { name: "JavaScript", iconLink: SiJavascript, color: "#f7df1e" },
-        { name: "TypeScript", iconLink: SiTypescript, color: "#0f5da1" },
-        { name: "Python", iconLink: FaPython, color: "#006fab" },
-        { name: "Angular", iconLink: FaAngular, color: "#006fab" },
-        { name: "React", iconLink: FaReact, color: "#006fab" },
-        { name: "Angular Material", iconLink: FaAngular, color: "#006fab" },
-        { name: "Leaflet.js", iconLink: SiLeaflet, color: "#006fab" },
-        { name: "PostgreSQL", iconLink: SiPostgresql, color: "#006fab" },
-        { name: "Git", iconLink: FaGitAlt, color: "#006fab" },
-        { name: "VS Code", iconLink: VscCode, color: "#006fab" }
-
+        { name: "HTML", iconLink: FaHtml5, duration: 2, y: 0 },
+        { name: "CSS", iconLink: FaCss3, duration: 2.5, y: -10 },
+        { name: "JavaScript", iconLink: SiJavascript, duration: 2, y: 0 },
+        { name: "TypeScript", iconLink: SiTypescript, duration: 2.5, y: -10 },
+        { name: "Python", iconLink: FaPython, duration: 2, y: 0 },
+        { name: "Angular", iconLink: FaAngular, duration: 2.5, y: -10 },
+        { name: "React", iconLink: FaReact, duration: 2, y: 0 },
+        { name: "Leaflet.js", iconLink: SiLeaflet, duration: 2, y: 0 },
+        { name: "PostgreSQL", iconLink: SiPostgresql, duration: 2.5, y: -10 },
+        { name: "Git", iconLink: FaGitAlt, duration: 2, y: 0 },
+        { name: "VS Code", iconLink: VscCode, duration: 2.5, y: -10 },
     ];
 
     return (
         <section id="skills" className={styles.container}>
-            <h1 className="sectionTitle">Skills</h1>
-            <div className={styles.skillList}>
+            <motion.h2
+                className="sectionTitle"
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1.5 }}
+            >
+                Skills
+            </motion.h2>
+            <motion.div
+                className={styles.skillList}
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1.5 }}
+            >
                 {skills.map((obj, index) => (
                     <SkillList
                         key={index}
                         icon={obj.iconLink}
-                        skill={obj.name}
-                        color={obj.color}
+                        duration={obj.duration}
+                        y={obj.y}
                     />
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 };

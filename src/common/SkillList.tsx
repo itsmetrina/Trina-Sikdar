@@ -1,14 +1,34 @@
-import { Tooltip, IconButton } from "@mui/material"
-import { SkillListProps } from "./interface"
+import { Variants, motion } from "framer-motion";
+import { SkillListProps } from "./interface";
 
-const SkillList = ({ icon: Icon, skill, color }: SkillListProps) => {
+const skillVariants = (y: number, duration: number):Variants => ({
+    initialState: { y: y, scale: 1 },
+    animateState: {
+        y: [10, -10],
+        transition: {
+            duration: duration,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse"
+        }
+    },
+    hoverState: {
+        scale: 1.5,
+        borderColor: "var(--yellow)",
+        transition: {
+            duration: 0.1
+        }
+    }
+});
+
+const SkillList = ({ icon: Icon, duration, y }: SkillListProps) => {
     return (
-        <Tooltip title={ skill }>
-            <IconButton>
-                <Icon style={{ color }} />
-            </IconButton>
-        </Tooltip>
-    )
-}
+        <>
+            <motion.span variants={skillVariants(y, duration)} initial="initialState" animate="animateState" whileHover="hoverState">
+                <Icon className="icon"  />
+            </motion.span>
+        </>
+    );
+};
 
-export default SkillList
+export default SkillList;

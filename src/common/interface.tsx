@@ -7,21 +7,17 @@ export interface MyProjects {
     p: string;
 }
 
-export interface SkillCategory {
-    category: string;
-    skills: Skill[];
-}
-
 export interface Skill {
     name: string;
     iconLink: IconType;
-    color: string;
+    duration: number;
+    y: number;
 }
 
 export interface SkillListProps {
     icon: React.ElementType;
-    skill: string;
-    color: string;
+    duration: number;
+    y: number;
 }
 
 export interface MyExperience {

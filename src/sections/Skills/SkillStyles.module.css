@@ -19,18 +19,26 @@
     justify-content: space-evenly;
     align-self: center;
     flex-wrap: wrap;
-    row-gap: 40px;
-    max-width: 26ch;
+    row-gap: 20px;
+    column-gap: 5px;
+    padding: 0.5rem;
 
     span {
-        padding: 10px;
-        border: 1px solid;
-        border-radius: 4px;
+        border: 1px solid #615a5a45;
+        background: #35373b4a;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
         transition: transform 200ms ease-in-out;
+
     }
 
-    span:hover {
-        transform: scale(1.05);
+    svg {
+        font-size: 2.5rem;
+        color: var(--footer-text-color);
+    }
+
+    svg:hover {
+        color: var(--yellow);
     }
 }
 
@@ -44,7 +52,7 @@ hr {
 
 @media (width >=800px) {
     .skillList {
-        max-width: fit-content;
+        max-width: calc(100dvh - 0.6%);
         gap: 30px;
 
         p {
