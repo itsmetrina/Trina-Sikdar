@@ -13,21 +13,14 @@
 
     span {
         display: flex;
-        gap: 25px;
         justify-content: center;
 
         a {
             margin: 0;
-
-            img {
-                width: 30px;
-            }
+            text-decoration: none;
+            color: var(--btn-color);
+            padding: 10px;
         }
-    }
-
-    a {
-        width: fit-content;
-        align-self: center;
     }
 
     button {
@@ -55,18 +48,6 @@
 
 .colorModeContainer {
     position: relative;
-}
-
-.colorMode {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 25px;
-    color: var(--text-color);
-}
-
-.colorMode:hover {
-    cursor: pointer;
 }
 
 .description {
