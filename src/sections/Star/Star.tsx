@@ -95,7 +95,7 @@ const Star = ({ onButtonClick }: StarProps) => {
 					animate="visible"
 				/>
 				<motion.a
-					href="https://github.com"
+					href="https://github.com/itsmetrina/"
 					target="_blank"
 					variants={topFlowIn(0.25)}
 					initial="hidden"
