@@ -12,6 +12,11 @@ const leftFlowIn = (delay: number) => ({
 	visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
 });
 
+const topFlowIn = (delay: number) => ({
+	hidden: { y: -100, opacity: 0 },
+	visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
+});
+
 const Star = () => {
 	return (
 		<section id="star" className={styles.container}>
@@ -50,24 +55,9 @@ const Star = () => {
 						showCursor={true}
 					/>
 				</motion.h2>
-				<motion.span
-					variants={leftFlowIn(0.5)}
-					initial="hidden"
-					animate="visible"
-				>
-					<a href="https://github.com" target="_blank">
-						<FaGithub />
-					</a>
-					<a href="https://linkedIn.com" target="_blank">
-						<FaLinkedin />
-					</a>
-					<a href="mailto:trinasikdar2000@gmail.com" target="_blank">
-						<FaAt />
-					</a>
-				</motion.span>
 				<motion.p
 					className={styles.description}
-					variants={leftFlowIn(0.75)}
+					variants={leftFlowIn(0.5)}
 					initial="hidden"
 					animate="visible"
 				>
@@ -77,13 +67,46 @@ const Star = () => {
 				<motion.a
 					href={CV}
 					download
-					variants={leftFlowIn(1)}
+					variants={leftFlowIn(0.75)}
 					initial="hidden"
 					animate="visible"
 				>
-					<button className="hover">
-						Resume
-					</button>
+					<button className="hover">Resume</button>
+				</motion.a>
+			</div>
+			<div className={styles.connect}>
+				<motion.hr
+					className={styles.line}
+					variants={topFlowIn(0)}
+					initial="hidden"
+					animate="visible"
+				/>
+				<motion.a
+					href="https://github.com"
+					target="_blank"
+					variants={topFlowIn(0.25)}
+					initial="hidden"
+					animate="visible"
+				>
+					<FaGithub />
+				</motion.a>
+				<motion.a
+					href="https://linkedIn.com"
+					target="_blank"
+					variants={topFlowIn(0.5)}
+					initial="hidden"
+					animate="visible"
+				>
+					<FaLinkedin />
+				</motion.a>
+				<motion.a
+					href="mailto:trinasikdar2000@gmail.com"
+					target="_blank"
+					variants={topFlowIn(0.75)}
+					initial="hidden"
+					animate="visible"
+				>
+					<FaAt />
 				</motion.a>
 			</div>
 		</section>

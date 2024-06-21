@@ -11,10 +11,12 @@ const App = () => {
 			<AnimatedCursor
 				color="255,255,255"
 			/>
-			<Star />
-			<Skills />
-			<Projects />
-			<Footer />
+			<>
+				<Star />
+				<Skills />
+				<Projects />
+				<Footer />
+			</>
 		</>
 	);
 };

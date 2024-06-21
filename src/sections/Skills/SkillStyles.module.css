@@ -24,8 +24,8 @@
     padding: 0.5rem;
 
     span {
-        border: 1px solid #615a5a45;
-        background: #35373b4a;
+        border: 1px solid var(--border-color);
+        background: var(--skill-bg);
         padding: 0.8rem;
         border-radius: 0.8rem;
         transition: transform 200ms ease-in-out;

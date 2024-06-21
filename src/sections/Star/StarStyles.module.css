@@ -11,18 +11,6 @@
         max-width: 200px;
     }
 
-    span {
-        display: flex;
-        justify-content: center;
-
-        a {
-            margin: 0;
-            text-decoration: none;
-            color: var(--btn-color);
-            padding: 10px;
-        }
-    }
-
     button {
         background-color: var(--btn-color);
         color: var(--btn-text-color);
@@ -62,6 +50,29 @@
     gap: 20px;
 }
 
+.connect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+        margin: 0;
+        text-decoration: none;
+        color: var(--btn-color);
+
+        svg {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (width <800px) {
+    .line {
+        display: none;
+    }
+}
+
 @media (width >=800px) {
     .container {
         flex-direction: row-reverse;
@@ -72,6 +83,15 @@
             max-width: 350px;
             width: 350px;
         }
+    }
+
+    .connect {
+        flex-direction: column;
+    }
+
+    .line {
+        height: 300px;
+        width: 1px;
     }
 }
 
