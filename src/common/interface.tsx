@@ -1,5 +1,13 @@
 import { IconType } from "react-icons";
 
+export interface StarProps {
+    onButtonClick: () => void;
+}
+
+export interface ConfettiProps {
+    show: boolean;
+}
+
 export interface MyProjects {
     src: string;
     link: string;

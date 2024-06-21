@@ -25,7 +25,7 @@
 
     span {
         border: 1px solid var(--border-color);
-        background: var(--skill-bg);
+        background: var(--card-bg);
         padding: 0.8rem;
         border-radius: 0.8rem;
         transition: transform 200ms ease-in-out;

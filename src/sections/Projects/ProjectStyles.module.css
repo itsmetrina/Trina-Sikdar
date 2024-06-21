@@ -5,7 +5,8 @@
 
     img {
         max-width: 250px;
-        background-color: var(--project-card-bg);
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
         border-radius: 20px;
         padding: 1rem;
     }

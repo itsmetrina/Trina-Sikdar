@@ -6,6 +6,7 @@ import CV from "../../assets/cv.pdf";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 import { FaAt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { StarProps } from "../../common/interface";
 
 const leftFlowIn = (delay: number) => ({
 	hidden: { x: -100, opacity: 0 },
@@ -17,7 +18,7 @@ const topFlowIn = (delay: number) => ({
 	visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
 });
 
-const Star = () => {
+const Star = ({ onButtonClick }: StarProps) => {
 	return (
 		<section id="star" className={styles.container}>
 			<div className={styles.colorModeContainer}>
@@ -81,6 +82,7 @@ const Star = () => {
 					variants={leftFlowIn(1)}
 					initial="hidden"
 					animate="visible"
+					onClick={onButtonClick}
 				>
 					<button className="hover">Resume</button>
 				</motion.a>
