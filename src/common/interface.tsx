@@ -13,6 +13,7 @@ export interface MyProjects {
     link: string;
     h3: string;
     p: string;
+    tenchnologyUsed: string[];
 }
 
 export interface Skill {

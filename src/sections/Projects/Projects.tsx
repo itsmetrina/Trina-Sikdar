@@ -12,12 +12,14 @@ const Projects = () => {
 			link: "https://github.com/itsmetrina/weather-app",
 			h3: "Weather",
 			p: "A Weather Forecast App",
+			tenchnologyUsed: ["Html", "Scss", "React"]
 		},
 		{
 			src: portfolio,
 			link: "https://github.com/itsmetrina/Trina-Sikdar",
 			h3: "Portfolio",
 			p: "Portfolio App",
+			tenchnologyUsed: ["Html", "Css", "React"]
 		},
 	];
 	return (
