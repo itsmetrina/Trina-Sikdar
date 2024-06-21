@@ -31,13 +31,24 @@ const Star = () => {
 				/>
 			</div>
 			<div className={styles.info}>
-				<motion.h1 variants={leftFlowIn(0)} initial="hidden" animate="visible">
+				<motion.p
+					variants={leftFlowIn(0)}
+					initial="hidden"
+					animate="visible"
+				>
+					Hello, I'm
+				</motion.p>
+				<motion.h1
+					variants={leftFlowIn(0.25)}
+					initial="hidden"
+					animate="visible"
+				>
 					Trina
 					<br />
 					Sikdar
 				</motion.h1>
 				<motion.h2
-					variants={leftFlowIn(0.25)}
+					variants={leftFlowIn(0.5)}
 					initial="hidden"
 					animate="visible"
 				>
@@ -57,7 +68,7 @@ const Star = () => {
 				</motion.h2>
 				<motion.p
 					className={styles.description}
-					variants={leftFlowIn(0.5)}
+					variants={leftFlowIn(0.75)}
 					initial="hidden"
 					animate="visible"
 				>
@@ -67,7 +78,7 @@ const Star = () => {
 				<motion.a
 					href={CV}
 					download
-					variants={leftFlowIn(0.75)}
+					variants={leftFlowIn(1)}
 					initial="hidden"
 					animate="visible"
 				>

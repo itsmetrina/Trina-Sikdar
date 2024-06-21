@@ -40,7 +40,7 @@ const Skills = () => {
             <motion.h2
                 className="sectionTitle"
                 whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
+                initial={{ opacity: 0, y: -50 }}
                 transition={{ duration: 1.5 }}
             >
                 Skills
