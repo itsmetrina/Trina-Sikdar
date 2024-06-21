@@ -1,6 +1,6 @@
 const ProjectCard = ({ src, link, h3, p }: { src: string, link: string, h3: string, p: string }) => {
     return (
-        <a href={link}>
+        <a href={link} target="_blank" >
             <img
                 className="hover"
                 src={src}
