@@ -7,12 +7,11 @@ import Skills from "./sections/Skills/Skills";
 import Star from "./sections/Star/Star";
 import { useEffect, useState } from "react";
 import MotionConfetti from "./common/MotionConfetti";
-import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const App = () => {
 	const [showConfetti, setShowConfetti] = useState(false);
 	const [load, updateLoad] = useState(true);
-	const { scrollYProgress } = useScroll();
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -28,12 +27,6 @@ const App = () => {
 			setShowConfetti(false);
 		}, 5000); // 5 seconds
 	};
-
-	const scaleX = useSpring(scrollYProgress, {
-		stiffness: 100,
-		damping: 30,
-		restDelta: 0.001,
-	});
 
 	return (
 		<AnimatePresence>
@@ -63,7 +56,6 @@ const App = () => {
 				</motion.div>
 			) : (
 				<>
-					<motion.div className="progress-bar" style={{ scaleX }} />
 					<AnimatedCursor color="255,255,255" />
 					<MotionConfetti show={showConfetti} />
 					<>
