@@ -34,8 +34,8 @@ const ProjectCard = ({
 				}
 				transition={{ duration: 1 }}
 			>
-				<a href={link} target="_blank">
-					<h4 className="hover">{title}</h4>
+				<a className="hover" href={link} target="_blank">
+					<h4>{title}</h4>
 				</a>
 				<p>{description}</p>
 				<div className={styles.techStack}>

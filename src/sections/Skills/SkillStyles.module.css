@@ -22,6 +22,7 @@
     row-gap: 20px;
     column-gap: 5px;
     padding: 1.5rem;
+    width: 100dvw;
 
     span {
         border: 1px solid var(--border-color);
@@ -52,7 +53,7 @@ hr {
 
 @media (width >=800px) {
     .skillList {
-        max-width: calc(100dvh - 3px);
+        width: calc(100dvh - 3px);
         gap: 30px;
 
         p {
