@@ -29,7 +29,7 @@
 }
 
 .projectCard {
-    width: 100%;
+    width: calc(100dvh - 3px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

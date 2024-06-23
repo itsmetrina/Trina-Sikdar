@@ -1,14 +1,14 @@
 import "./App.css";
 import Footer from "./sections/Footer/Footer";
-import MotionConfetti from "./common/MotionConfetti";
 import Projects from "./sections/Projects/Projects";
+import MotionConfetti from "./common/MotionConfetti";
 import Skills from "./sections/Skills/Skills";
 import Star from "./sections/Star/Star";
 
 import AnimatedCursor from "react-animated-cursor";
-import { AnimatePresence, motion } from "framer-motion";
 import { MutatingDots } from "react-loader-spinner";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const App = () => {
 	const [showConfetti, setShowConfetti] = useState(false);
