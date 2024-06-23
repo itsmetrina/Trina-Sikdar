@@ -7,16 +7,17 @@ import Skills from "./sections/Skills/Skills";
 import Star from "./sections/Star/Star";
 import { useEffect, useState } from "react";
 import MotionConfetti from "./common/MotionConfetti";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 
 const App = () => {
 	const [showConfetti, setShowConfetti] = useState(false);
 	const [load, updateLoad] = useState(true);
+	const { scrollYProgress } = useScroll();
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			updateLoad(false);
-		}, 1500); // 1 second
+		}, 5000); // 1 second
 
 		return () => clearTimeout(timer);
 	}, []);
@@ -28,14 +29,21 @@ const App = () => {
 		}, 5000); // 5 seconds
 	};
 
+	const scaleX = useSpring(scrollYProgress, {
+		stiffness: 100,
+		damping: 30,
+		restDelta: 0.001,
+	});
+
 	return (
 		<AnimatePresence>
 			{load ? (
 				<motion.div
-					initial={{ opacity: 1, y: 0 }}
-					animate={{ opacity: 0, y: -100 }}
-					transition={{ duration: 1.5 }}
+					initial={{ opacity: 1 }}
+					animate={{ opacity: 0 }}
+					transition={{ duration: 5 }}
 					key="loading"
+					style={{ width: "100dvw" }}
 				>
 					<MutatingDots
 						visible={true}
@@ -48,13 +56,14 @@ const App = () => {
 						wrapperStyle={{
 							justifyContent: "center",
 							alignItems: "center",
-							height: "calc(100dvh - 5rem)"
+							height: "calc(100dvh - 5rem)",
 						}}
 						wrapperClass=""
 					/>
 				</motion.div>
 			) : (
 				<>
+					<motion.div className="progress-bar" style={{ scaleX }} />
 					<AnimatedCursor color="255,255,255" />
 					<MotionConfetti show={showConfetti} />
 					<>

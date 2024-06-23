@@ -1,27 +1,10 @@
 import styles from "./ProjectStyles.module.css";
-import weather from "../../assets/cloud.png";
-import portfolio from "../../assets/girl.png";
+
 import ProjectCard from "../../common/ProjectCard";
-import { MyProjects } from "../../common/interface";
 import { motion } from "framer-motion";
+import { PROJECTS } from "../../assets/constant";
 
 const Projects = () => {
-	const projectList: MyProjects[] = [
-		{
-			src: weather,
-			link: "https://github.com/itsmetrina/weather-app",
-			h3: "Weather",
-			p: "A Weather Forecast App",
-			tenchnologyUsed: ["Html", "Scss", "React"]
-		},
-		{
-			src: portfolio,
-			link: "https://github.com/itsmetrina/Trina-Sikdar",
-			h3: "Portfolio",
-			p: "Portfolio App",
-			tenchnologyUsed: ["Html", "Css", "React"]
-		},
-	];
 	return (
 		<section id="projects" className={styles.container}>
 			<motion.h2
@@ -33,13 +16,14 @@ const Projects = () => {
 				Projects
 			</motion.h2>
 			<div className={styles.projectsContainer}>
-				{projectList.map((obj, index) => (
+				{PROJECTS.map((project, index) => (
 					<ProjectCard
 						key={index}
-						src={obj.src}
-						link={obj.link}
-						h3={obj.h3}
-						p={obj.p}
+						title={project.title}
+						link={project.link}
+						image={project.image}
+						description={project.description}
+						technologies={project.technologies}
 					/>
 				))}
 			</div>

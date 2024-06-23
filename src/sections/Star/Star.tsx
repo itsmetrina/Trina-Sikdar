@@ -7,6 +7,7 @@ import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 import { FaAt, FaGithub, FaLinkedin } from "react-icons/fa";
 import { StarProps } from "../../common/interface";
+import { SiHackerrank } from "react-icons/si";
 
 const leftFlowIn = (delay: number) => ({
 	hidden: { x: -100, opacity: 0 },
@@ -84,7 +85,7 @@ const Star = ({ onButtonClick }: StarProps) => {
 					animate="visible"
 					onClick={onButtonClick}
 				>
-					<button className="hover">Resume</button>
+					<motion.button className="hover" whileHover={{ scale: 1.2 }}>Resume</motion.button>
 				</motion.a>
 			</div>
 			<div className={styles.connect}>
@@ -111,6 +112,15 @@ const Star = ({ onButtonClick }: StarProps) => {
 					animate="visible"
 				>
 					<FaLinkedin />
+				</motion.a>
+				<motion.a
+					href="https://www.hackerrank.com/profile/trinasikdar"
+					target="_blank"
+					variants={topFlowIn(0.75)}
+					initial="hidden"
+					animate="visible"
+				>
+					<SiHackerrank />
 				</motion.a>
 				<motion.a
 					href="mailto:trinasikdar2000@gmail.com"

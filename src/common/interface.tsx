@@ -29,6 +29,14 @@ export interface SkillListProps {
     y: number;
 }
 
+export interface ProjectCardProps {
+    title: string;
+    link: string;
+    image: string;
+    description: string;
+    technologies: string[];
+}
+
 export interface MyExperience {
     company: string;
     role: string;

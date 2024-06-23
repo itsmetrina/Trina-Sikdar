@@ -37,7 +37,8 @@ p {
 h2,
 h3,
 h4,
-p {
+p,
+span {
     font-family: "Roboto Mono", monospace;
 }
 
@@ -68,6 +69,16 @@ p {
 
 .hover {
     cursor: pointer;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--yellow);
+    transform-origin: 0%;
 }
 
 @media (width >=800px) {
