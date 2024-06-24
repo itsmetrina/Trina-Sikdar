@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { StarProps } from "../../common/interface";
 import { SiHackerrank } from "react-icons/si";
+import { STAR_CONTENT } from "../../assets/constant";
 
 const leftFlowIn = (delay: number) => ({
 	hidden: { x: -100, opacity: 0 },
@@ -74,8 +75,7 @@ const Star = ({ onButtonClick }: StarProps) => {
 					initial="hidden"
 					animate="visible"
 				>
-					With a passion for developing modern React web apps for commercial
-					businesses.
+					{STAR_CONTENT}
 				</motion.p>
 				<motion.a
 					href={CV}
