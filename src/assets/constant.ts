@@ -1,7 +1,7 @@
 import weather from "../assets/cloud.png";
 import portfolio from "../assets/girl.png";
 
-export const STAR_CONTENT = "Passionate Frontend Engineer with expertise in Angular development, recognized for driving impactful solutions and delivering superior user experiences. Experienced in Angular (10+), Angular Material, and proficient in React and Python.";
+export const STAR_CONTENT = "Passionate Frontend Engineer with expertise in Angular development, recognized for driving impactful solutions and delivering superior user experiences. Experienced in Angular, Angular Material, and proficient in React and Python.";
 
 export const EDUCATION = [
 	{
