@@ -3,32 +3,16 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-
-    img {
-        max-width: 110px;
-        padding: 1rem;
-        border-radius: 4px;
-        background: aliceblue;
-    }
-
-    a {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
-        justify-content: space-evenly;
-        text-decoration: none;
-        color: var(--btn-text-color);
-    }
 }
 
-.projectsContainer {
+.experiencesContainer {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
     margin-bottom: 8px;
 }
 
-.projectCard {
+.experienceCard {
     width: calc(100dvh - 3px);
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +21,7 @@
     margin-bottom: 2rem;
 }
 
-.projectDetails {
+.experienceDetails {
     width: 100%;
     text-align: center;
     padding: 1rem;
@@ -63,12 +47,24 @@
     justify-content: center;
 }
 
+.yearBox {
+    span {
+        color: var(--text-color);
+    }
+}
+
+.textSpan {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
 @media (width >=800px) {
-    .projectCard {
+    .experienceCard {
         justify-content: space-between;
     }
 
-    .projectDetails {
+    .experienceDetails {
         width: 50%;
         text-align: left;
 

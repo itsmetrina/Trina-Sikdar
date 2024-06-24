@@ -51,9 +51,9 @@ hr {
     margin: 30px auto;
 }
 
-@media (width >=800px) {
+@media (width >=768px) {
     .skillList {
-        width: calc(100dvh - 3px);
+        width: calc(100dvw - 30%);
         gap: 30px;
 
         p {
@@ -64,5 +64,11 @@ hr {
 
     hr {
         width: 300px;
+    }
+}
+
+@media (width <= 450px) {
+    .skillList {
+        width: calc(100dvw - 10%);
     }
 }

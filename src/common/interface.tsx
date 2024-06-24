@@ -37,6 +37,18 @@ export interface ProjectCardProps {
     technologies: string[];
 }
 
+export interface ExperienceCardProps {
+    year: string;
+    role: string;
+    company: string;
+    description: string;
+    technologies: string[];
+}
+
+export interface TextAnimationProps {
+    text: string;
+}
+
 export interface MyExperience {
     company: string;
     role: string;

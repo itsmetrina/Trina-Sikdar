@@ -4,6 +4,7 @@ import Projects from "./sections/Projects/Projects";
 import MotionConfetti from "./common/MotionConfetti";
 import Skills from "./sections/Skills/Skills";
 import Star from "./sections/Star/Star";
+import Experiences from "./sections/Experiences/Experiences";
 
 import AnimatedCursor from "react-animated-cursor";
 import { MutatingDots } from "react-loader-spinner";
@@ -62,6 +63,7 @@ const App = () => {
 					<>
 						<Star onButtonClick={handleShowConfetti} />
 						<Skills />
+						<Experiences />
 						<Projects />
 						<Footer />
 					</>
