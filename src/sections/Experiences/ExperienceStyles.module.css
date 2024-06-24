@@ -15,14 +15,14 @@
 .experienceCard {
     width: calc(100dvh - 3px);
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
 }
 
 .experienceDetails {
-    width: 100%;
+    width: calc(100vw - 10%);
     text-align: center;
     padding: 1rem;
 
@@ -61,6 +61,7 @@
 
 @media (width >=800px) {
     .experienceCard {
+        flex-flow: wrap;
         justify-content: space-between;
     }
 
@@ -75,5 +76,15 @@
 
     .techStack {
         justify-content: start;
+    }
+}
+
+@media (width <=450px) {
+    .experienceCard {
+        flex-flow: column;
+    }
+
+    .experienceDetails {
+        width: calc(100vw - 10%);
     }
 }
