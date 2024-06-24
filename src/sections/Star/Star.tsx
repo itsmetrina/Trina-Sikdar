@@ -5,7 +5,7 @@ import CV from "../../assets/cv.pdf";
 
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-import { FaAt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { StarProps } from "../../common/interface";
 import { SiHackerrank } from "react-icons/si";
 
@@ -121,15 +121,6 @@ const Star = ({ onButtonClick }: StarProps) => {
 					animate="visible"
 				>
 					<SiHackerrank />
-				</motion.a>
-				<motion.a
-					href="mailto:trinasikdar2000@gmail.com"
-					target="_blank"
-					variants={topFlowIn(0.75)}
-					initial="hidden"
-					animate="visible"
-				>
-					<FaAt />
 				</motion.a>
 			</div>
 		</section>
