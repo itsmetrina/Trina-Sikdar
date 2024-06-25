@@ -79,7 +79,7 @@ const Star = ({ onButtonClick }: StarProps) => {
 				</motion.p>
 				<motion.a
 					href={CV}
-					download
+					download="TrinaSikdar"
 					variants={leftFlowIn(1)}
 					initial="hidden"
 					animate="visible"
