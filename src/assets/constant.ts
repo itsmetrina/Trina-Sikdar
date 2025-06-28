@@ -1,5 +1,6 @@
 import weather from "../assets/cloud.png";
 import portfolio from "../assets/girl.png";
+import minispotify from "../assets/music.png";
 
 export const STAR_CONTENT = "Frontend Engineer with expertise in Angular development, recognized for driving impactful solutions and delivering superior user experiences. Proficient in React and Python.";
 
@@ -35,7 +36,15 @@ export const PROJECTS = [
 		image: portfolio,
 		description: "A personal portfolio website showcasing projects, skills, and contact information.",
 		technologies: ["HTML", "CSS", "TypeScript", "React", "Vite", "Framer Motion"],
+	},
+	{
+		title: "MiniSpotify 🎧",
+		link: "https://github.com/yourusername/minispotify",
+		image: minispotify,
+		description: "Built a Spotify-powered music dashboard using React and TypeScript. Features include OAuth login, top tracks/artists/playlists display, persistent state with Zustand, and polished Tailwind UI. Focused on clean architecture and real-time music insights.",
+		technologies: ["React", "TypeScript", "TailwindCSS", "daisyui", "Zustand", "Spotify API", "Vite"],
 	}
+
 ];
 
 export const CONTACT = {
