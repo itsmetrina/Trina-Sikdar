@@ -46,9 +46,9 @@ const Star = ({ onButtonClick }: StarProps) => {
 					initial="hidden"
 					animate="visible"
 				>
-					Clare
+					Trina
 					<br />
-					Macgarden
+					Sikdar
 				</motion.h1>
 				<motion.h2
 					variants={leftFlowIn(0.5)}
