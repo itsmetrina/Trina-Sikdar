@@ -61,6 +61,8 @@ const Star = ({ onButtonClick }: StarProps) => {
 							"Frontend Developer",
 							"UI Developer",
 							"Angular Developer",
+							"React Developer",
+							"Frontend Engineer"
 						]}
 						typeSpeed={100}
 						loop
