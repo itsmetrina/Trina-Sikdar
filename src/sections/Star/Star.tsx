@@ -105,7 +105,7 @@ const Star = ({ onButtonClick }: StarProps) => {
 					<FaGithub />
 				</motion.a>
 				<motion.a
-					href="https://linkedIn.com"
+					href="https://www.linkedin.com/in/trina-sikdar"
 					target="_blank"
 					variants={topFlowIn(0.5)}
 					initial="hidden"
