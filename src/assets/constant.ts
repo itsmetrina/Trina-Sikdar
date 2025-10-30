@@ -13,50 +13,52 @@ export const EDUCATION = [
 ];
 
 export const EXPERIENCES = [
-  {
-    year: "2021 - Present",
-    role: "Frontend Developer",
-    company: "Wipro",
-    description: "Leading frontend development for a large-scale Smart City IoT platform accessed by 5,000+ daily users. Architected modular UI components using Angular, React, TypeScript, Tailwind and Zustand. Improved performance by 25% via lazy loading, API caching and RxJS optimizations. Developed Python microservices for data processing and PostgreSQL automation. Acted as UI Lead, driving releases and mentoring junior developers. Delivered high-impact POCs including a React SPA that influenced a major client win.",
-    technologies: [
-      "Angular",
-      "React",
-      "TypeScript",
-      "RxJS",
-      "TailwindCSS",
-      "Zustand",
-      "Python",
-      "Node.js",
-      "PostgreSQL",
-      "REST APIs",
-      "Azure"
-    ],
-  }
+	{
+		year: "2021 - Present",
+		role: "Frontend Developer",
+		company: "Wipro",
+		description: "Leading frontend development for a large-scale Smart City IoT platform accessed by 5,000+ daily users. Architected modular UI components using Angular, React, TypeScript, Tailwind and Zustand. Improved performance by 25% via lazy loading, API caching and RxJS optimizations. Developed Python microservices for data processing and PostgreSQL automation. Acted as UI Lead, driving releases and mentoring junior developers. Delivered high-impact POCs including a React SPA that influenced a major client win.",
+		technologies: [
+			"Angular",
+			"React",
+			"TypeScript",
+			"RxJS",
+			"TailwindCSS",
+			"Zustand",
+			"Python",
+			"Node.js",
+			"PostgreSQL",
+			"REST APIs",
+			"Azure"
+		],
+	}
 ];
 
 export const PROJECTS = [
 	{
+		title: "MiniSpotify 🎧",
+		link: "https://github.com/itsmetrina/minispotify",
+		image: minispotify,
+		description:
+			"Engineered a Spotify-powered music dashboard with secure OAuth 2.0 + PKCE authentication, real-time playlist browsing, and media insights. Designed performant global state using Zustand and crafted an elegant Tailwind UI optimized for responsiveness.",
+		technologies: ["React", "TypeScript", "Zustand", "TailwindCSS", "daisyUI", "Spotify Web API", "Vite"],
+	},
+	{
 		title: "Weather App",
 		link: "https://github.com/itsmetrina/weather-app",
 		image: weather,
-		description: "Developed a React-based Weather App integrating OpenWeatherMap APIs for real-time weather updates and 5 days forecasts. Features include intuitive UI, responsive design, and location-based weather detection.",
-		technologies: ["HTML", "CSS", "JavaScript", "ReactJs"],
+		description:
+			"Built a weather intelligence dashboard integrating OpenWeather APIs to deliver real-time updates and 5-day forecasts. Designed an intuitive and responsive UI with seamless search and location-based detection.",
+		technologies: ["React", "JavaScript", "CSS", "OpenWeather API"],
 	},
 	{
 		title: "Portfolio Website",
 		link: "https://github.com/itsmetrina/Trina-Sikdar",
 		image: portfolio,
-		description: "A personal portfolio website showcasing projects, skills, and contact information.",
-		technologies: ["HTML", "CSS", "TypeScript", "React", "Vite", "Framer Motion"],
-	},
-	{
-		title: "MiniSpotify 🎧",
-		link: "https://github.com/yourusername/minispotify",
-		image: minispotify,
-		description: "Built a Spotify-powered music dashboard using React and TypeScript. Features include OAuth login, top tracks/artists/playlists display, persistent state with Zustand, and polished Tailwind UI. Focused on clean architecture and real-time music insights.",
-		technologies: ["React", "TypeScript", "TailwindCSS", "daisyui", "Zustand", "Spotify API", "Vite"],
+		description:
+			"Developed a modern personal portfolio to showcase projects and experience. Built with motion-rich UI animations, responsive layouts, and component-driven architecture using Vite and Framer Motion.",
+		technologies: ["React", "TypeScript", "Vite", "Framer Motion", "TailwindCSS"],
 	}
-
 ];
 
 export const CONTACT = {
