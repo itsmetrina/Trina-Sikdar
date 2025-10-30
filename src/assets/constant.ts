@@ -2,7 +2,7 @@ import weather from "../assets/cloud.png";
 import portfolio from "../assets/girl.png";
 import minispotify from "../assets/music.png";
 
-export const STAR_CONTENT = "Frontend Engineer with expertise in Angular development, recognized for driving impactful solutions and delivering superior user experiences. Proficient in React and Python.";
+export const STAR_CONTENT = "Frontend Engineer with 4+ years of experience building scalable, high-performance web applications using Angular, React, TypeScript, and Node.js. Strong in state management (Zustand/Redux), UI architecture, API integration, and performance optimization. Known for delivering impactful solutions, leading UI releases, and mentoring developers.";
 
 export const EDUCATION = [
 	{
@@ -13,13 +13,25 @@ export const EDUCATION = [
 ];
 
 export const EXPERIENCES = [
-	{
-		year: "2021 - Present",
-		role: "Developer",
-		company: "Wipro",
-		description: "Directed Angular development efforts for a sophisticated SMART CITY application, demonstrating mastery in Angular (10+), Angular Material, and integration of Leaflet Maps and diverse chart libraries. Led UI development to ensure alignment with project requirements and timelines. Engineered reusable components to boost performance, while collaborating closely with backend teams to seamlessly integrate microservices and Webmethods API. Additionally, proficiently developed Python scripts for efficient API calls, JSON parsing, and data analysis using Pandas, alongside optimizing PostgreSQL queries for enhanced database functionality.",
-		technologies: ["HTML", "SCSS", "JavaScript", "TypeScript", "Angular", "LeafletJs", "PostgresSQL", "Python"],
-	}
+  {
+    year: "2021 - Present",
+    role: "Frontend Developer",
+    company: "Wipro",
+    description: "Leading frontend development for a large-scale Smart City IoT platform accessed by 5,000+ daily users. Architected modular UI components using Angular, React, TypeScript, Tailwind and Zustand. Improved performance by 25% via lazy loading, API caching and RxJS optimizations. Developed Python microservices for data processing and PostgreSQL automation. Acted as UI Lead, driving releases and mentoring junior developers. Delivered high-impact POCs including a React SPA that influenced a major client win.",
+    technologies: [
+      "Angular",
+      "React",
+      "TypeScript",
+      "RxJS",
+      "TailwindCSS",
+      "Zustand",
+      "Python",
+      "Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Azure"
+    ],
+  }
 ];
 
 export const PROJECTS = [
